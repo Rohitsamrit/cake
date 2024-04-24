@@ -17,8 +17,8 @@ const Canvas = () => {
       style={{
         position: "relative",
         width: "700px",
-        margin: "28px auto",
-        height: "600px",
+        margin: "24px auto",
+        height: "581px",
         overflow: "hidden",
       }}
       onClick={handleCanvasClick}

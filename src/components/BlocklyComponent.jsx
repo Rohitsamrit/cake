@@ -237,15 +237,16 @@ const BlocklyComponent = () => {
   return (
     <div className="BlockyComp">
       <div className="highlghted-text">
-        <h1>
-          {language === "en" ? "Blockly Toolbox" : " Boîte à outils Blockly"}
+        <h1 style={{ color: "black" }}>
+          {/* {language === "en" ? "Cake Toolbox" : " Boîte à outils Blockly"} */}
+          Cake Toolbox
         </h1>
-        <h1>
-          {language === "en"
-            ? "Blockly Workspace"
-            : "Espace de travail Blockly"}
+        <h1 style={{ color: "black" }}>
+          {/* {language === "en" ? "Blockly Workspace" : "Espace de travail Blockly"} */}
+          Cake Workspace
         </h1>
       </div>
+
       <div
         className="highlighted"
         id="blocklyDiv"

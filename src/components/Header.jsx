@@ -47,8 +47,8 @@
 //           <Button className="btn" color="inherit">{language === 'en' ? 'Tutorials' : 'Tutoriels'}</Button>
 //           <Button className="btn" color="inherit">{language === 'en' ? 'Boards' : 'Cartes'}</Button>
 //           <Button className="btn" color="inherit">{language === 'en' ? 'Connect' : 'Connecter'}</Button>
-//           </div> 
-          
+//           </div>
+
 //           {/* Editable Project Name */}
 //           <ProjectNameInput
 //             value={projectName}
@@ -129,7 +129,7 @@
 //             <Button className="btn" color="inherit">{language === 'en' ? 'Tutorials' : 'Tutoriels'}</Button>
 //             <Button className="btn" color="inherit">{language === 'en' ? 'Boards' : 'Cartes'}</Button>
 //             <Button className="btn" color="inherit">{language === 'en' ? 'Connect' : 'Connecter'}</Button>
-//           </div> 
+//           </div>
 
 //           {/* Editable Project Name */}
 //           <ProjectNameInput
@@ -179,39 +179,38 @@
 //   );
 // }
 
-
 // Modified Header.jsx
-import React, { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import { styled } from '@mui/material/styles';
-import { useSelector, useDispatch } from 'react-redux';
-import { GrLanguage } from 'react-icons/gr';
-import { setLanguage } from '../features/languageSlice';
-import * as en from 'blockly/msg/en'; // Import English messages
-import * as fr from 'blockly/msg/fr'; // Import French messages
+import React, { useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { styled } from "@mui/material/styles";
+import { useSelector, useDispatch } from "react-redux";
+import { GrLanguage } from "react-icons/gr";
+import { setLanguage } from "../features/languageSlice";
+import * as en from "blockly/msg/en"; // Import English messages
+import * as fr from "blockly/msg/fr"; // Import French messages
 
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 const ProjectNameInput = styled(TextField)({
-  maxWidth: '200px',
-  '& .MuiInputBase-input': {
-    textAlign: 'center',
-    fontWeight: 'bold',
+  maxWidth: "200px",
+  "& .MuiInputBase-input": {
+    textAlign: "center",
+    fontWeight: "bold",
   },
-  '& .MuiOutlinedInput-notchedOutline': {
-    border: 'none',
+  "& .MuiOutlinedInput-notchedOutline": {
+    border: "none",
   },
 });
 
 export default function Header() {
   const language = useSelector((state) => state.language);
-  const [projectName, setProjectName] = useState('Project_Name');
+  const [projectName, setProjectName] = useState("Project_Name");
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const dispatch = useDispatch(); // Add this line to get access to dispatch function
 
@@ -257,55 +256,67 @@ export default function Header() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, width: '100%' }}>
+    <Box sx={{ flexGrow: 1, width: "100%" }}>
       <AppBar position="static">
         <Toolbar>
           {/* LogicBlocks Title */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <h1>{language === 'en' ? 'LogicBlocks' : 'Blocs Logiques'}</h1>
+            {/* <h1>{language === 'en' ? 'LogicBlocks' : 'Blocs Logiques'}</h1> */}
+            <h1>Cake Bake</h1>
           </Typography>
-
           {/* Navigation Buttons */}
-          <div className="nav-button">
-             <Button className="btn" color="inherit">{language === 'en' ? 'Files' : 'Fichiers'}</Button>
-           <Button className="btn" color="inherit">{language === 'en' ? 'Edit' : 'Modifier'}</Button>
-           <Button className="btn" color="inherit">{language === 'en' ? 'Tutorials' : 'Tutoriels'}</Button>
-           <Button className="btn" color="inherit">{language === 'en' ? 'Boards' : 'Cartes'}</Button>
-           <Button className="btn" color="inherit">{language === 'en' ? 'Connect' : 'Connecter'}</Button>
-          </div>
-
+          {/* <div className="nav-button">
+            <Button className="btn" color="inherit">
+              {language === "en" ? "Files" : "Fichiers"}
+            </Button>
+            <Button className="btn" color="inherit">
+              {language === "en" ? "Edit" : "Modifier"}
+            </Button>
+            <Button className="btn" color="inherit">
+              {language === "en" ? "Tutorials" : "Tutoriels"}
+            </Button>
+            <Button className="btn" color="inherit">
+              {language === "en" ? "Boards" : "Cartes"}
+            </Button>
+            <Button className="btn" color="inherit">
+              {language === "en" ? "Connect" : "Connecter"}
+            </Button>
+          </div> */}
           {/* Editable Project Name */}
-          <ProjectNameInput
+          {/* <ProjectNameInput
             value={projectName}
             onChange={handleProjectNameChange}
             variant="outlined"
-            placeholder={language === 'en' ? 'Project Name' : 'Nom du Projet'}
+            placeholder={language === "en" ? "Project Name" : "Nom du Projet"}
             InputProps={{
               startAdornment: <Typography>|</Typography>,
               endAdornment: <Typography>|</Typography>,
             }}
-          />
-
+          /> */}
           {/* Language Dropdown */}
-          <div style={{ position: 'relative', marginLeft: '8px' }}>
-          <Button
+          {/* <div style={{ position: "relative", marginLeft: "8px" }}>
+            <Button
               onClick={handleClick}
-              startIcon={<GrLanguage style={{ color: 'black' }} />}
+              startIcon={<GrLanguage style={{ color: "black" }} />}
             >
-              {language === 'en' ? 'English' : 'Français'}
-            </Button>
-            <Menu
+              {language === "en" ? "English" : "Français"}
+            </Button> */}
+          {/* <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={() => handleLanguageItemClick('en')}>English</MenuItem>
-              <MenuItem onClick={() => handleLanguageItemClick('fr')}>Français</MenuItem>
-            </Menu>
-            {/* <label htmlFor="languageDropdown" onClick={() => handleLanguageChange(language)}>
+              <MenuItem onClick={() => handleLanguageItemClick("en")}>
+                English
+              </MenuItem>
+              <MenuItem onClick={() => handleLanguageItemClick("fr")}>
+                Français
+              </MenuItem>
+            </Menu> */}
+          {/* <label htmlFor="languageDropdown" onClick={() => handleLanguageChange(language)}>
               <GrLanguage />
             </label> */}
-            {/* {isDropdownOpen && (
+          {/* {isDropdownOpen && (
               <select
                 id="languageDropdown"
                 value={language}
@@ -321,21 +332,21 @@ export default function Header() {
                 <option value="fr">French</option>
               </select>
             )} */}
-          </div>
-
+          {/* </div> */}
           {/* Spacing Element */}
           <Box sx={{ flexGrow: 1 }} />
-
           {/* Logo Placeholder */}
-          <img src="trial_sprite_nobkg.png" alt="Logo" style={{ height: '50px' }} />
-
+          {/* <img
+            src="trial_sprite_nobkg.png"
+            alt="Logo"
+            style={{ height: "50px" }}
+          /> */}
           {/* Sign In Button */}
-          <Button color="inherit">
-            {language === 'en' ? 'Sign In' : 'Se Connecter'}
-          </Button>
+          {/* <Button color="inherit">
+            {language === "en" ? "Sign In" : "Se Connecter"}
+          </Button> */}
         </Toolbar>
       </AppBar>
     </Box>
   );
 }
-
