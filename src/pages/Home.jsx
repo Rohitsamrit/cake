@@ -1,8 +1,8 @@
 import React from 'react';
 import BlocklyComponent from '../components/BlocklyComponent';
 import Canvas from '../components/Canvas';
-import AnchorMenu from '../components/AnchorMenu';
-import FloatingActionButton from '../components/FloatingActionButton';
+
+
 import Header from '../components/Header';
 import SidePanel from '../components/SidePanel';
 
@@ -14,11 +14,11 @@ const Home = () => {
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '20px' }}>
         <BlocklyComponent />
-        <Canvas />
+        <Canvas  />
         <SidePanel />
       </div>
-      <AnchorMenu />
-      <FloatingActionButton />
+      
+    
     </div>
   );
 };
